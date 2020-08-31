@@ -76,8 +76,8 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div style={{ backgroundColor: 'tomato', marginLeft: '40px', marginRight: '40px' }}>
-        <Grid >
+      <div style={{ backgroundColor: 'tomato', marginLeft: '10px', marginRight: '10px', alignContent: 'center' }}>
+        <Grid>
         <Grid.Row columns={1}>
             <Grid.Column>
             <div className='ui container header centered' style={{ marginTop: '50px' }}>
