@@ -4,6 +4,8 @@ import { Grid, Image, Button } from 'semantic-ui-react';
 import human from './icons/human.svg';
 import social_media from './icons/social_media.svg';
 import brain from './icons/brain2.svg';
+import arrow from './icons/arrow2.svg';
+
 
 import {
   depressed_prior, nondepressed_prior,
@@ -106,18 +108,25 @@ class App extends React.Component {
             </Grid.Column>
             <Grid.Column></Grid.Column>
           </Grid.Row>
-          <Grid.Row columns={2} style={{ marginTop: '50px'}}>
-            <Grid.Column>
-              <StatusForm handleStatus={this.handleStatus}/>
-            </Grid.Column >
-            <Grid.Column width='8'>
-            <ResultCard
-                depressed_bool={this.state.depressed_bool}
-                depressed_LL={this.state.depressed_LL}
-                nondepressed_LL={this.state.nondepressed_LL}
-              />
+          <Grid.Row columns={1} style={{ marginTop: '50px'}}>
+            <Grid.Column >
+              <StatusForm handleStatus={this.handleStatus} />
             </Grid.Column>
-            </Grid.Row>
+          </Grid.Row>
+          <Grid.Row columns={1}>
+            <Grid.Column>
+              <Image className="ui image centered" src={arrow} style={{maxWidth: '50px'}}/>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row columns={1}>
+            <Grid.Column>
+              <ResultCard
+                  depressed_bool={this.state.depressed_bool}
+                  depressed_LL={this.state.depressed_LL}
+                  nondepressed_LL={this.state.nondepressed_LL}
+                />
+            </Grid.Column>
+          </Grid.Row>
             <Grid.Row columns={1} style={{ marginTop: '200px'}}>
               <Grid.Column>
                 <div className='ui container centered header'>

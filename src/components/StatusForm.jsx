@@ -33,7 +33,7 @@ class StatusForm extends React.Component {
 
   render() {
     return (
-      <div className='ui card container' style={{ width: '40vw', padding: '20px'}}>
+      <div className='ui card container' style={{ width: '40vw', padding: '20px', minWidth: '650px'}}>
         <form className="ui form clearing" onSubmit={this.onSubmit}>
           <div className="field">
             <label>Social Media Status</label>
@@ -45,7 +45,7 @@ class StatusForm extends React.Component {
             />
           </div>
           <div>{this.renderValidate()}</div>
-          <button className="ui button primary right floated" type="submit">Submit</button>
+          <button className="ui button basic orange right floated" type="submit">Submit</button>
         </form>
       </div>
     );
