@@ -81,20 +81,22 @@ class App extends React.Component {
         <Grid.Row columns={1}>
             <Grid.Column>
             <div className='ui container header centered' style={{ marginTop: '50px' }}>
-              <h1 style={{textAlign: 'right', fontWeight: 'lighter', color: 'rgba(255,255,255,1)', fontSize: 'large'}}
+              <h1 style={{textAlign: 'right', fontWeight: 'lighter', color: 'rgba(255,255,255,1)', fontSize: '20pt'}}
               >
                 ( by vinh ton )
                 </h1>
                 <Image className="ui large image" src={brain} style={{minWidth: '50px', marginTop: '30px'}}/>
-              <h1 style={{ fontWeight: 'lighter', color: 'rgba(255,255,255,1)', marginTop: '0px' }}> peer mental health predictor tool</h1>
+              <h1 style={{ fontWeight: 'lighter', color: 'rgba(255,255,255,1)', marginTop: '0px', fontSize: '36pt' }}>
+               peer mental health predictor tool
+               </h1>
             </div>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row columns={1}>
             <Grid.Column>
             <div className='ui container centered header' style={{ marginTop: '30px' }}>
-            <h1 style={{ fontWeight: 'lighter',color: 'rgba(255,255,255,.60)', fontSize: 'large', textAlign: 'left' }}>instructions:</h1>
-            <h1 style={{ fontWeight: 'lighter',color: 'rgba(255,255,255,.60)', fontSize: 'large', textAlign: 'left', marginTop: '-12px' }}>{header_msg}</h1>
+            <h1 style={{ fontWeight: 'lighter',color: 'rgba(255,255,255,.60)', fontSize: '20pt', textAlign: 'left' }}>instructions:</h1>
+            <h1 style={{ fontWeight: 'lighter',color: 'rgba(255,255,255,.60)', fontSize: '20pt', textAlign: 'left', marginTop: '-12px' }}>{header_msg}</h1>
             </div>
             </Grid.Column>
           </Grid.Row>
@@ -130,19 +132,19 @@ class App extends React.Component {
             <Grid.Row columns={1} style={{ marginTop: '200px'}}>
               <Grid.Column>
                 <div className='ui container centered header'>
-                  <Button inverted to='https://vinhton.com'>see more projects</Button>
+                  <Button style={{fontSize: '20pt'}}inverted to='https://vinhton.com'>see more projects</Button>
                 </div>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row columns={1} style={{ marginTop: '50px'}}>
               <Grid.Column>
-                <h2 style={{ fontWeight: 'lighter', color: 'rgba(255,255,255,.70)', fontSize: 'medium', }}>
+                <h2 style={{ fontWeight: 'lighter', color: 'rgba(255,255,255,.70)', fontSize: '20pt', }}>
                   disclaimer:
                 </h2>
-                <h2 style={{ fontWeight: 'lighter', color: 'rgba(255,255,255,.70)', fontSize: 'medium', marginTop: '-12px' }}>
+                <h2 style={{ fontWeight: 'lighter', color: 'rgba(255,255,255,.70)', fontSize: '20pt', marginTop: '-12px' }}>
                   this tool is not meant to replace formal mental health diagnosis but rather an initial step in giving your friend support
                 </h2>
-                <h2 style={{ fontWeight: 'lighter', color: 'rgba(255,255,255,.70)', fontSize: 'medium' }}>
+                <h2 style={{ fontWeight: 'lighter', color: 'rgba(255,255,255,.70)', fontSize: '20pt' }}>
                 </h2>
               </Grid.Column>
             </Grid.Row>

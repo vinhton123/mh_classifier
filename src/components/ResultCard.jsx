@@ -10,38 +10,38 @@ class ResultCard extends React.Component {
   renderResult = () => {
     if (this.props.depressed_bool === null) {
       return (
-        <Segment>
+        <Segment style={{fontSize: '20pt', color: 'rgba(0,0,0,.4)'}}>
           <b>Awaiting submission to get back results ...</b>
         </Segment>
       );
     }
     else if (this.props.depressed_bool) {
       return (
-        <>
-          <Segment className='red'>
+        <React.Fragment> 
+          <Segment className='red' style={{fontSize: '20pt'}}> 
           <b>{depressed_msg}</b>
           </Segment>
-          <Segment>
+          <Segment style={{fontSize: '20pt'}}>
           {depressed_LL_msg} <b>{this.props.depressed_LL}</b>
           <br/>
           <br/>
           {nondepressed_LL_msg} <b>{this.props.nondepressed_LL}</b>
           </Segment>
-       </>
+       </React.Fragment>
       );
     } else {
       return (
-        <>
-          <Segment className='green'>
+        <React.Fragment>
+          <Segment className='green' style={{fontSize: '20pt'}}>
             <b>{nondepressed_msg}</b>
           </Segment>
-          <Segment>
+          <Segment style={{fontSize: '20pt'}}>
           {depressed_LL_msg} <b>{this.props.depressed_LL}</b>
           <br/>
           <br/>
           {nondepressed_LL_msg} <b>{this.props.nondepressed_LL}</b>
           </Segment>
-       </>
+       </React.Fragment>
       );
     }
   }

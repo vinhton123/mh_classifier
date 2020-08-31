@@ -35,18 +35,20 @@ class StatusForm extends React.Component {
 
   render() {
     return (
-      <div className='ui card centered container' style={{minWidth: '600px',  padding: '20px' }}>
+      <div className='ui card centered container' style={{minWidth: '600px',  padding: '20px'}}>
         <form className="ui form clearing" onSubmit={this.onSubmit}>
-          <div className="field">
-            <label>Social Media Status</label>
+          <div className="field" style={{fontSize: '20pt', textAlign: 'center'}}>
+            <label>Social Media Post</label>
             <TextArea
-              style={{ resize: 'none' }}
+              style={{ resize: 'none', marginTop: '30px' }}
               placeholder="Enter your friend's social media post."
               onChange={this.onChange}
             />
           </div>
           <div>{this.renderValidate()}</div>
-          <button className="ui button basic orange right floated" type="submit">Submit</button>
+          <button style={{fontSize: '20pt'}} className="ui button basic orange right floated" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     );
