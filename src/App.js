@@ -132,7 +132,9 @@ class App extends React.Component {
             <Grid.Row columns={1} style={{ marginTop: '200px'}}>
               <Grid.Column>
                 <div className='ui container centered header'>
-                  <Button style={{fontSize: '20pt'}}inverted to='https://vinhton.com'>see more projects</Button>
+                  <a href='https://vinhton.com'>
+                  <Button style={{fontSize: '20pt'}}inverted>see more projects</Button>
+                  </a>
                 </div>
               </Grid.Column>
             </Grid.Row>
