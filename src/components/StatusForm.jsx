@@ -3,17 +3,33 @@ import React from 'react';
 class StatusForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { status: '' };
+    this.state = { status: '', error: false };
   }
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.handleStatus(this.state.status);
+    if (this.state.status.length > 20) {
+      this.setState({error: false });
+      this.props.handleStatus(this.state.status);
+    } else {
+      this.setState({error: true });
+      this.props.handleStatus(null);
+    }
  }
 
- onChange = (e) => {
-  this.setState({ status: e.target.value });
-}
+  onChange = (e) => {
+    this.setState({ status: e.target.value });
+  }
+
+  renderValidate = () => {
+    if (this.state.error) {
+      return (
+        <div className='ui header red'> Please enter more than 20 characters for better accuracy. </div>
+      );
+    } else {
+      return null;
+    }
+  }
 
   render() {
     return (
@@ -28,7 +44,8 @@ class StatusForm extends React.Component {
               onChange={this.onChange}
             />
           </div>
-          <button className="ui button right floated" type="submit">Submit</button>
+          <div>{this.renderValidate()}</div>
+          <button className="ui button primary right floated" type="submit">Submit</button>
         </form>
       </div>
     );

@@ -3,7 +3,7 @@ import { Segment, SegmentGroup } from 'semantic-ui-react';
 
 import { depressed_msg, depressed_LL_msg,
 nondepressed_msg, nondepressed_LL_msg,
-} from '../utils/ constants';
+} from '../utils/constants';
 
 class ResultCard extends React.Component {
 
@@ -11,7 +11,7 @@ class ResultCard extends React.Component {
     if (this.props.depressed_bool === null) {
       return (
         <Segment>
-          Awaiting submission to get back results ...
+          <b>Awaiting submission to get back results ...</b>
         </Segment>
       );
     }
@@ -23,6 +23,7 @@ class ResultCard extends React.Component {
           </Segment>
           <Segment>
           {depressed_LL_msg} <b>{this.props.depressed_LL}</b>
+          <br/>
           <br/>
           {nondepressed_LL_msg} <b>{this.props.nondepressed_LL}</b>
           </Segment>
@@ -37,6 +38,7 @@ class ResultCard extends React.Component {
           <Segment>
           {depressed_LL_msg} <b>{this.props.depressed_LL}</b>
           <br/>
+          <br/>
           {nondepressed_LL_msg} <b>{this.props.nondepressed_LL}</b>
           </Segment>
        </>
@@ -46,7 +48,7 @@ class ResultCard extends React.Component {
 
   render() {
     return (
-      <SegmentGroup className='ui container' style={{marginRight: '50px'}}>
+      <SegmentGroup className='ui container'>
         {this.renderResult()}
       </SegmentGroup>
     );

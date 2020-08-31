@@ -59,7 +59,7 @@ export const logLikelihoodOf = (input_data, log_probs_table, prior) => {
       logLikelihood += log_probs_table[word];
     }
   } 
-  return logLikelihood - Math.log(prior);
+  return logLikelihood + Math.log(prior);
 
 }
 

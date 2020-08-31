@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import { filename } from './ constants';
+import { filename } from './constants';
 
 export default async function GetData() {
     const response = Papa.parse(await fetchCsv()).data;
@@ -7,7 +7,7 @@ export default async function GetData() {
 }
 
 async function fetchCsv() {
-    const response = await fetch(`data/${filename}`);
+    const response = await fetch(`/mh_classifier/data/${filename}`);
     const reader = response.body.getReader();
     const result = await reader.read();
     const decoder = new TextDecoder('utf-8');
