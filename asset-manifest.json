@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/mh_classifier/static/js/main.6cd49d9c.chunk.js",
-    "main.js.map": "/mh_classifier/static/js/main.6cd49d9c.chunk.js.map",
+    "main.js": "/mh_classifier/static/js/main.00875fb2.chunk.js",
+    "main.js.map": "/mh_classifier/static/js/main.00875fb2.chunk.js.map",
     "runtime-main.js": "/mh_classifier/static/js/runtime-main.5c4a1dae.js",
     "runtime-main.js.map": "/mh_classifier/static/js/runtime-main.5c4a1dae.js.map",
     "static/js/2.b2d3d233.chunk.js": "/mh_classifier/static/js/2.b2d3d233.chunk.js",
     "static/js/2.b2d3d233.chunk.js.map": "/mh_classifier/static/js/2.b2d3d233.chunk.js.map",
     "index.html": "/mh_classifier/index.html",
-    "precache-manifest.01cf2419a35342118cc3076ff9072b38.js": "/mh_classifier/precache-manifest.01cf2419a35342118cc3076ff9072b38.js",
+    "precache-manifest.feb226e5a635750c3d607349504a15c9.js": "/mh_classifier/precache-manifest.feb226e5a635750c3d607349504a15c9.js",
     "service-worker.js": "/mh_classifier/service-worker.js",
     "static/js/2.b2d3d233.chunk.js.LICENSE.txt": "/mh_classifier/static/js/2.b2d3d233.chunk.js.LICENSE.txt",
     "static/media/arrow2.svg": "/mh_classifier/static/media/arrow2.44a5a1f2.svg",
@@ -18,6 +18,6 @@
   "entrypoints": [
     "static/js/runtime-main.5c4a1dae.js",
     "static/js/2.b2d3d233.chunk.js",
-    "static/js/main.6cd49d9c.chunk.js"
+    "static/js/main.00875fb2.chunk.js"
   ]
 }
