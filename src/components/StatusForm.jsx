@@ -1,4 +1,6 @@
 import React from 'react';
+import { TextArea } from 'semantic-ui-react';
+
 
 class StatusForm extends React.Component {
   constructor(props) {
@@ -33,13 +35,12 @@ class StatusForm extends React.Component {
 
   render() {
     return (
-      <div className='ui card container' style={{ width: '40vw', padding: '20px', minWidth: '650px'}}>
+      <div className='ui card centered container' style={{minWidth: '600px',  padding: '20px' }}>
         <form className="ui form clearing" onSubmit={this.onSubmit}>
           <div className="field">
             <label>Social Media Status</label>
-            <input
-              type="text"
-              name="post"
+            <TextArea
+              style={{ resize: 'none' }}
               placeholder="Enter your friend's social media post."
               onChange={this.onChange}
             />
