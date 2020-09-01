@@ -1,7 +1,7 @@
 export const filename = "mh_dataset.csv";
 
-export const depressed_prior = 0.5;
-export const nondepressed_prior = 0.5;
+export const depressed_prior = 0.3;
+export const nondepressed_prior = 0.7;
 
 export const header_msg = "input a social media post from a friend that you're concerned about to see if they might be feeling depressed or not";
 export const depressed_msg = "It seems like they are not feeling well lately. It would be a good idea to reach out to them and give them support.";

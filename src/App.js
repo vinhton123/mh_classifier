@@ -63,12 +63,12 @@ class App extends React.Component {
 
     const depressed_LL = logLikelihoodOf(
       status_array, this.state.depressed_log_probs, depressed_prior
-    )*-1;
+    );
     const nondepressed_LL = logLikelihoodOf(
       status_array, this.state.nondepressed_log_probs, nondepressed_prior
-    )*-1 + 7;
+    );
     this.setState({ depressed_LL, nondepressed_LL });
-    const bestGuess = Math.max(depressed_LL, nondepressed_LL);
+    const bestGuess = Math.min(depressed_LL, nondepressed_LL);
     if (bestGuess === depressed_LL) {
       return true;
     } else {
