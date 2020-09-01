@@ -18,10 +18,10 @@ class ResultCard extends React.Component {
     else if (this.props.depressed_bool) {
       return (
         <React.Fragment> 
-          <Segment className='red' style={{fontSize: '20pt'}}> 
+          <Segment className='red' style={{fontSize: '20pt', lineHeight: '1.6'}}> 
           <b>{depressed_msg}</b>
           </Segment>
-          <Segment style={{fontSize: '20pt'}}>
+          <Segment style={{fontSize: '20pt', lineHeight: '1.6'}}>
           {depressed_LL_msg} <b>{this.props.depressed_LL}</b>
           <br/>
           <br/>
@@ -32,10 +32,10 @@ class ResultCard extends React.Component {
     } else {
       return (
         <React.Fragment>
-          <Segment className='green' style={{fontSize: '20pt'}}>
+          <Segment className='green' style={{fontSize: '20pt', lineHeight: '1.4'}}>
             <b>{nondepressed_msg}</b>
           </Segment>
-          <Segment style={{fontSize: '20pt'}}>
+          <Segment style={{fontSize: '20pt',lineHeight: '1.4'}}>
           {depressed_LL_msg} <b>{this.props.depressed_LL}</b>
           <br/>
           <br/>
