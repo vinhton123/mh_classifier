@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Image, Button } from 'semantic-ui-react';
+import { Grid, Image } from 'semantic-ui-react';
+
 
 import human from './icons/human.svg';
 import social_media from './icons/social_media.svg';
@@ -133,7 +134,9 @@ class App extends React.Component {
               <Grid.Column>
                 <div className='ui container centered header'>
                   <a href='https://vinhton.com'>
-                  <Button style={{fontSize: '20pt'}}inverted>see more projects</Button>
+                  <button className="ui button inverted" style={{fontSize: '20pt'}}>
+                    see more projects
+                  </button>
                   </a>
                 </div>
               </Grid.Column>
