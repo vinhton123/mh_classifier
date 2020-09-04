@@ -41,12 +41,12 @@ class StatusForm extends React.Component {
             <label>Social Media Post</label>
             <TextArea
               style={{ resize: 'none', marginTop: '30px' }}
-              placeholder="Enter your friend's social media post."
+              placeholder="Paste your friend's social media post."
               onChange={this.onChange}
             />
           </div>
           <div>{this.renderValidate()}</div>
-          <button style={{fontSize: '20pt'}} className="ui button basic orange right floated" type="submit">
+          <button style={{fontSize: '20pt'}} className="ui button green right floated" type="submit">
             Submit
           </button>
         </form>

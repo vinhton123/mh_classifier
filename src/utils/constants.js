@@ -1,10 +1,12 @@
 export const filename = "mh_dataset.csv";
 
-export const depressed_prior = 0.3;
-export const nondepressed_prior = 0.7;
+export const depressed_prior = 0.5;
+export const nondepressed_prior = 0.5;
+export const bias_towards_nondepressed = -7;
 
-export const header_msg = "input a social media post from a friend that you're concerned about to see if they might be feeling depressed or not";
+export const header_msg = "copy/paste a social media post from a friend that you're concerned about to see if they might be feeling depressed or not";
 export const depressed_msg = "It seems like they are not feeling well lately. It would be a good idea to reach out to them and give them support.";
 export const nondepressed_msg = "It seems like they are doing okay, but make sure to cherish them. :)";
+export const explanation = "The predictor uses a Naive Bayes Maximum Likelihood Estimation algorithm to predict whether the text you input has more evidence towards being written by someone experiencing mental distress vs not. Basically, I take a data set of facebook statuses labelled to be from depressed people vs. non depressed people, look at the words they contain and count them (assuming that the order of words does not matter and that each word is probabilistically independent of one another), to get the conditional probability of that word occuring if the text was from someone who was depressed vs. not depressed and store this into tables. Then, I read in the user's inputted status and keep track of and count the words that appeared in each of the depressed vs. non depressed tables, and find the probabilty of the sequence of words based on the depressed vs non- depressed tables. I do so by taking advantage of the fact that the probability of events can be chained by multiplying them if we assume they are independent events, (in other words, the probability of seeing the words 'I am depressed' is the probability of seeing the words P('I' )x P('am') x P('depressed') ). To make things easier, I use a rule where the product of a set of terms is the same as the sum of the log of each of those terms. I build up this sum of log probabilities according to the probabilities of seeing those words in the depressed case vs. nondepressed case. Then, I compare those two sums (the log likelihood of seeing that particular set of words given they are depressed vs. nondepressed) and choose the higher one. I bias the data towards the status being nondepressed by adding a prior probability that is weighted heavier towards non-depressed, which makes you require more evidence for the status being depressesd compared to non-depressed to account for the fact that it easier to detect negative emotion vs. neutral and happy emotion. The dataset I created was very weak and small (scraped from inspirational quotes for non-depressed and testimonials of depressed people for depressed statuses), so the tool exists more of a proof of concept rather than a completely robust tool.";
 export const depressed_LL_msg = "Log likelihood of text showing emotional distress: ";
 export const nondepressed_LL_msg = "Log likelihood of text showing positivity: ";

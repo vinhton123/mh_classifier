@@ -5,12 +5,12 @@ import { Grid, Image } from 'semantic-ui-react';
 import human from './icons/human.svg';
 import social_media from './icons/social_media.svg';
 import brain from './icons/brain2.svg';
-import arrow from './icons/arrow2.svg';
+import arrow from './icons/arrow.svg';
 
 
 import {
   depressed_prior, nondepressed_prior,
-  header_msg,
+  header_msg, bias_towards_nondepressed,
 } from './utils/constants.js';
 
 import getData from './utils/importFile';
@@ -68,7 +68,7 @@ class App extends React.Component {
       status_array, this.state.nondepressed_log_probs, nondepressed_prior
     );
     this.setState({ depressed_LL, nondepressed_LL });
-    const bestGuess = Math.min(depressed_LL, nondepressed_LL);
+    const bestGuess = Math.min(depressed_LL, nondepressed_LL + bias_towards_nondepressed);
     if (bestGuess === depressed_LL) {
       return true;
     } else {
